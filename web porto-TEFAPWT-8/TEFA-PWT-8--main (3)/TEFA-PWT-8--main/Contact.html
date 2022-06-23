@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>portfolio</title>
+        <link rel="stylesheet" href="CSS/ContactCSS.css" />
+    </head>
+    <body>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="box">
+            <form id='nameForm'></form>
+            <form>
+                <h1>Hubungi Saya</h1>
+                <input type="text" class="input-field"  id="name" placeholder="Nama" required/>
+                <input type="email" class="input-field" id="email" placeholder="Email" required/>
+                <textarea type="text" class="input-field textarea-field" id="message" placeholder="Pesan" required></textarea>
+                <input type="button" class="btn" value="kirim" onclick="hasil()">
+                
+                <br>
+                <p id="hasil-name"></p>
+                <p id="hasil-email"></p>
+                <p id="hasil-message"></p>
+                <br />
+                
+            </form>
+        </div>
+        
+        <script>
+            function hasil() {
+                var nama = document.getElementById("name").value ;
+                var email = document.getElementById("email").value ;
+                var pesan = document.getElementById("message").value ;
+    
+                if (nama !="" && email !="" && pesan!=""){
+                    document.getElementById("hasil-name").innerHTML = nama
+                    document.getElementById("hasil-email").innerHTML = email
+                    document.getElementById("hasil-message").innerHTML = pesan
+                    return True;
+                }else{
+                    alert('Mohon isi form dengan lengkap !');
+                }
+                }
+        </script>
+            </form>
+        </div>
+    </body>
+    <footer>
+        <div class="footer">
+            <p>TEFA Kelompok 8</p>
+        </div>
+    </footer>
+</html>
