@@ -1,0 +1,199 @@
+* {
+    margin:0; 
+    padding:0;
+
+}
+body {
+    font-family: poppins;
+}
+nav {
+    display: flex;
+    background-color: #F5F5F5;
+    padding: 1px 0px;
+    justify-content: space-around;
+}
+nav .headr {
+    padding: 40px;
+    color: #610B0B;
+}
+
+.container2 {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.form-slide h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgba(66, 17, 17, 1);
+    width: 100%;
+}
+.form-slide{
+    background-color: #F8ECEC;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    padding: 25px 150px;
+}
+.inputfield {
+    margin-top: 10px;
+}
+.container2 .form-slide .inputfield input {
+    display: block;
+    width: 569px;
+    height: 37px;
+    padding-left: 10px;
+    border: 1px solid #D4C2C2;
+    color: #2B2B2B;
+    font-family: poppins;
+    border-radius: 10px;
+    justify-content: space-between;
+    outline: none;
+}
+.container2 .form-slide .inputfield label {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    color: #604343;
+}
+.container2 .form-slide .inputfield select {
+    display: block;
+    width: 581px;
+    height: 37px;
+    padding-left: 10px;
+    border: 1px solid #D4C2C2;
+    color: #2B2B2B;
+    font-family: poppins;
+    border-radius: 10px;
+    outline: none;
+}
+.container2 .form-slide .inputfield textarea {
+    display: block;
+    width: 568px;
+    height: 37px;
+    padding-left: 10px;
+    border: 1px solid #D4C2C2;
+    color: #2B2B2B;
+    font-family: poppins;
+    border-radius: 10px;
+    outline: none;
+}
+.flex {
+    display: flex;
+    justify-content: start;
+    gap: 175px;
+    margin-top: 10px;
+    color: #604343;
+}
+.container2 .form-slide .flex input {
+    display: block;
+    width: 191px;
+    height: 37px;
+    padding-left: 10px;
+    font-family: poppins;
+    border: 1px solid #D4C2C2;
+    color: #2B2B2B;
+    border-radius: 10px;
+    outline: none;
+}
+.file input {
+    width: 120px;
+    height: 37px;
+    margin-top: 20px;
+    padding-left: 10px;
+    font-family: poppins;
+    border: 1px solid #D4C2C2;
+    border-radius: 10px;
+    outline: none;
+}
+
+.inputfile {
+    margin-top: 20px;
+}
+.inputfile input {
+    display: flex;
+    justify-content: start;
+    margin-top: 5px;
+}
+
+.inputfile>span{
+    margin-left: 20px;
+    display: block;
+    font-style: poppins;
+    font-style: italic;
+    font-size: 12px;
+    color: rgb(255, 0, 0, 50%);
+
+}
+
+/botton/
+.group-btn {
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+    padding: 30px 0px;
+}
+.btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: #FA5249;
+    color: #f3f3f3;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+.btn:hover {
+    box-shadow: #ffffff 0 0 0 3px;
+}
+
+.footer {
+    bottom: 0;
+    background: #FA5249;
+    color: #421111;
+    text-align:center;
+    font-family: poppins;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

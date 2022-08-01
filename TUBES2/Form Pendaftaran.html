@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulir Pendaftaran PT. Telkom Indonesia</title>
+        <link rel="stylesheet" href="CSS/styleCSS.css" />
+        <script src="JS/script.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="Aset/logo telkom indonesia 1.svg" alt="">
+            </div>
+            <div class="headr">
+                <h1>Formulir Rekruitasi Profesional Expert Digital</h1>
+            </div>
+        </nav>
+        
+        <div class="container2">
+            <form action="#" class="form" onsubmit="return false">
+                <div class="form-slide">
+                    <h1>Data Pribadi</h1>
+                    <div class="inputfield">
+                        <label>Nama Lengkap</label>
+                        <input type="text" id="name" class="input" required>
+                        <span></span>
+                    </div>
+                    <div class="inputfield">
+                        <label>Bidang yang didaftar</label>
+                        <select id="posisi" required>
+                          <option value="">Pilih Salah Satu</option>
+                          <option value="Front end">Front end</option>
+                          <option value="Backend">Backend</option>
+                          <option value="Software Architect">Software Architect</option>
+                          <option value="Quality Assurance">Quality Assurance</option>
+                          <option value="Document Engineer">Document Engineer</option>
+                          <option value="Android Developer">Android Developer</option>
+                          <option value="iOS Developer">iOS Developer</option>
+                        </select>
+                    </div>
+                    <div class="inputfield">
+                        <label>Jenis Kelamin</label>
+                        <select id="jeniskelamin" required>
+                            <option value="">--Pilih Salah Satu--</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <div class="flex">
+                        <div class="ttl">
+                            <label>Tempat Lahir</label>
+                            <input type="text" id="tempatlahir" class="input" required>
+                            <span></span>
+                        </div>  
+                        <div class="ttl">
+                            <label>Tanggal Lahir</label>
+                            <input type="date" id="birthday" required>
+                            <span></span>
+                        </div>
+                    </div>  
+                    <div class="inputfield">
+                        <label>No. Hp</label>
+                        <input type="text" id="NOhp" class="input" required>
+                        <span></span>
+                    </div>
+                    <div class="inputfield">
+                        <label>Alamat Email</label>
+                        <input type="email" id="email" class="input" required>
+                        <span></span>
+                    </div> 
+                    <div class="inputfield">
+                        <label>Alamat</label>
+                        <textarea type="text" id="alamat" class="input" required></textarea>
+                        <span></span>
+                    </div>
+
+                    <!--PENDIDIKAN-->
+                    <h1>Pendidikan</h1>
+                        <label>Asal Universitas</label>
+                        <input type="text" id="asaluniv" class="input" required />
+                    <div class="inputfield">
+                        <label>Jenjang</label>
+                        <select id="jenjang" required>
+                          <option value="">Pilih Salah Satu</option>
+                          <option value="S1">S1</option>
+                          <option value="S2">S2</option>
+                          <option value="S3">S3</option>
+                        </select>
+                    </div>
+                    <div class="inputfield">
+                        <label>Fakultas</label>
+                        <input type="text" id="fakultas" class="input" required/>
+                    </div>
+                    <div class="flex">
+                        <div class="option-tanggal">
+                            <label>Tahun Masuk</label>
+                            <input type="date" id="tahunmasuk" required>
+                        </div>
+                        <div class="option-tanggal">
+                            <label>Tahun Lulus</label>
+                            <input type="date" id="tahunkeluar"  required>
+                        </div>
+                    </div>
+
+                    <!--PENGALAMAN KERJA-->
+                    <h1>Pengalaman Kerja</h1>
+                    <div class="inputfield">
+                        <label>Nama Perusahaan</label>
+                        <input type="text" id="namaPerusahaan" class="input" required/>
+                    </div>
+                    <div class="inputfield">
+                        <label>Lama Kerja</label>
+                        <select id="lamakerja" required>
+                          <option value="">Pilih Salah Satu</option>
+                          <option value="Labih Dari 5 Tahun">Lebih Dari 5 Tahun</option>
+                          <option value="Kurang Dari 5 Tahun">Kurang Dari 5 Tahun</option>
+                        </select>
+                    </div>
+                    
+                    
+                    <!--Konfirmasi-->
+                    <h1>Konfirmasi</h1>
+                    <div class="inputfile">
+                        <label>CV</label>
+                        <input type="file" id="cv" class="input" required/>
+                    </div>
+                    <div class="inputfile">
+                        <label>Sertifikat Internasional</label>
+                        <input type="file" id="sertifikat" class="input"/>
+                        <span>*Tidak Wajib</span>
+                    </div>
+                    <div class="inputfile">
+                        <label>Portofolio</label>
+                        <input type="file" id="portofolio" class="input" required/>
+                    </div>
+                    <div class="group-btn">
+                        <input type="submit" class="btn btn-next" value="Kirim" onclick="hasil()">
+                    </div>
+                    <script>
+                        var uploadField = document.getElementById("cv");
+                        uploadField.onchange = function() {
+                            if (this.files[0].size > 500000) {
+                                alert("Maaf. File Terlalu Besar ! Maksimal Upload 500 KB");
+                                this.value = "";
+                            };
+                        };
+                    </script>
+
+                    <!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <br>
+    <p id="hasil-name"></p>
+    <p id="hasil-posisi"></p>
+    <p id="hasil-jeniskelamin"></p>
+    <p id="hasil-tempatlahir"></p>
+    <p id="hasil-birthday"></p>
+    <p id="hasil-NOhp"></p>
+    <p id="hasil-email"></p>
+    <p id="hasil-alamat"></p>
+    <p id="hasil-asaluniv"></p>
+    <p id="hasil-jenjang"></p>
+    <p id="hasil-fakultas"></p>
+    <p id="hasil-tahunmasuk"></p>
+    <p id="hasil-tahunkeluar"></p>
+    <p id="hasil-namaPerusahaan"></p>
+    <p id="hasil-lamakerja"></p>
+    <br />
+  </div>
+
+</div>
+
+
+<script>
+ // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    function hasil() {
+        var nama = document.getElementById("name").value ;
+        var pssi = document.getElementById("posisi").value ;
+        var gender = document.getElementById("jeniskelamin").value ;
+        var tl = document.getElementById("tempatlahir").value ;
+        var bday = document.getElementById("birthday").value ;
+        var no = document.getElementById("NOhp").value ;
+        var email = document.getElementById("email").value ;
+        var almt = document.getElementById("alamat").value ;
+        var univ = document.getElementById("asaluniv").value ;
+        var jnjg = document.getElementById("jenjang").value ;
+        var fkltas = document.getElementById("fakultas").value ;
+        var thnmasuk = document.getElementById("tahunmasuk").value ;
+        var thnkeluar = document.getElementById("tahunkeluar").value ;
+        var nmperusahaan = document.getElementById("namaPerusahaan").value ;
+        var lmkerja =document.getElementById("lamakerja").valu
+        if (nama !="" && pssi !="" && gender !="" && tl !="" && bday !="" && no !="" && email !="" && almt !="" && univ !="" && jnjg !="" && fkltas !="" && thnmasuk !="" && thnkeluar !="" && nmperusahaan !="" && lmkerja !=""){
+            document.getElementById("hasil-name").innerHTML = nama
+            document.getElementById("hasil-posisi").innerHTML = pssi
+            document.getElementById("hasil-jeniskelamin").innerHTML = gender
+            document.getElementById("hasil-tempatlahir").innerHTML = tl
+            document.getElementById("hasil-birthday").innerHTML = bday
+            document.getElementById("hasil-NOhp").innerHTML = no
+            document.getElementById("hasil-email").innerHTML = email
+            document.getElementById("hasil-alamat").innerHTML = almt
+            document.getElementById("hasil-asaluniv").innerHTML = univ
+            document.getElementById("hasil-jenjang").innerHTML = jnjg
+            document.getElementById("hasil-fakultas").innerHTML = fkltas
+            document.getElementById("hasil-tahunmasuk").innerHTML = thnmasuk
+            document.getElementById("hasil-tahunkeluar").innerHTML = thnkeluar
+            document.getElementById("hasil-namaPerusahaan").innerHTML = nmperusahaan
+            document.getElementById("hasil-lamakerja").innerHTML = lmkerja
+
+                modal.style.display = "block";
+            }else{
+
+                alert('Isi form dengan lengkap !');
+                }
+            }
+
+            </script>
+            </div>
+
+            </form>     
+            </div>
+        </div>    
+    </body>
+    <footer>
+        <div class="footer">
+            <p>PT. Telkom Indonesia</p>
+        </div>
+    </footer>
